@@ -8,8 +8,8 @@ import { Footer } from "./shared/footer"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-    title: "Greenfield Village - Official Website",
-    description: "Welcome to Greenfield Village - A peaceful community where tradition meets progress",
+    title: "Desa Suluun - Official Website",
+    description: "Selamat datang di Desa Suluun - Sebuah komunitas yang damai di mana tradisi bertemu dengan kemajuan",
 }
 
 export default function RootLayout({

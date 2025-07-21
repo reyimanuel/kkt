@@ -1,6 +1,5 @@
 import { Users, TreePine, Building, MapPin, Phone, Mail, Clock, Calendar } from "lucide-react"
 import { HeroSection } from "./shared/hero-section"
-import { StatsSection } from "./shared/stats-section"
 import { AnnouncementCard } from "./shared/announcement-card"
 
 export default function HomePage() {
@@ -14,63 +13,58 @@ export default function HomePage() {
     const quickLinks = [
         {
             icon: Building,
-            title: "Village History",
-            description: "Discover our rich heritage and historical landmarks",
-            buttonText: "Explore History",
+            title: "Sejarah Desa",
+            description: "Pelajari sejarah dan perkembangan desa kami",
+            buttonText: "Jelajahi Sejarah",
             href: "/information",
             iconColor: "text-blue-600",
         },
         {
             icon: Mail,
-            title: "Submit Complaint",
-            description: "Report issues or concerns to the village council",
-            buttonText: "File Complaint",
+            title: "Pengaduan Masyarakat",
+            description: "Ajukan pengaduan atau saran untuk perbaikan desa",
+            buttonText: "Ajukan Pengaduan",
             href: "/complaints",
             iconColor: "text-green-600",
         },
         {
             icon: Calendar,
-            title: "Events & News",
-            description: "Stay updated with upcoming events and announcements",
-            buttonText: "View Events",
+            title: "Berita & Acara",
+            description: "Dapatkan informasi terkini tentang acara dan pengumuman yang akan datang",
+            buttonText: "Lihat Acara",
             href: "/announcements",
             iconColor: "text-purple-600",
         },
         {
             icon: Phone,
-            title: "Contact Us",
-            description: "Get in touch with village administration",
-            buttonText: "Contact Info",
+            title: "Kontak Kami",
+            description: "Hubungi kami untuk pertanyaan atau bantuan",
+            buttonText: "Info Kontak",
             href: "#contact",
             iconColor: "text-red-600",
         },
     ]
 
     const contacts = [
-        { icon: Phone, title: "Phone", value: "(555) 123-4567", color: "text-blue-600" },
-        { icon: Mail, title: "Email", value: "info@greenfieldvillage.gov", color: "text-green-600" },
-        { icon: Clock, title: "Office Hours", value: "Mon-Fri: 8AM-5PM", color: "text-purple-600" },
+        { icon: Phone, title: "Telepon", value: "+62 813-4005-3202", color: "text-blue-600" },
+        { icon: Mail, title: "Email", value: "desasuluun@gmail.com", color: "text-green-600" },
+        { icon: Clock, title: "Jam Kerja", value: "Senin-Jumat: 8AM-5PM", color: "text-purple-600" },
     ]
 
     return (
         <div className="min-h-screen">
             <HeroSection
-                title="Welcome to Greenfield Village"
-                subtitle="A peaceful community nestled in the heart of nature, where tradition meets progress"
-                primaryButton={{ text: "Learn About Our Village", href: "/information" }}
-                secondaryButton={{ text: "Latest Events", href: "/announcements" }}
+                title="Selamat Datang di Desa Suluun"
+                subtitle="Masyarakat yang Harmonis, Alam yang Indah"
+                primaryButton={{ text: "Kenal Lebih Dalam Dengan Desa Suluun", href: "/information" }}
+                secondaryButton={{ text: "Pengumuman", href: "/announcements" }}
             />
-
-            <StatsSection stats={stats} />
 
             {/* Recent Announcements */}
             <section className="py-16">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-12">
-                        <h2 className="text-3xl font-bold mb-4">Latest Announcements</h2>
-                        <p className="text-gray-600 max-w-2xl mx-auto">
-                            Stay updated with the latest news and events in our community
-                        </p>
+                        <h2 className="text-3xl font-bold mb-4">Pengumuman</h2>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         <AnnouncementCard
@@ -105,8 +99,8 @@ export default function HomePage() {
             <section className="py-16 bg-gray-50">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-12">
-                        <h2 className="text-3xl font-bold mb-4">Quick Links</h2>
-                        <p className="text-gray-600">Access important village services and information</p>
+                        <h2 className="text-3xl font-bold mb-4">Akses Cepat</h2>
+                        <p className="text-gray-600">Lihat informasi penting desa</p>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         {quickLinks.map((link, index) => (
@@ -135,8 +129,8 @@ export default function HomePage() {
             <section id="contact" className="py-16">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-12">
-                        <h2 className="text-3xl font-bold mb-4">Contact Information</h2>
-                        <p className="text-gray-600">Reach out to us for any questions or assistance</p>
+                        <h2 className="text-3xl font-bold mb-4">Informasi Kontak</h2>
+                        <p className="text-gray-600">Hubungi kami untuk pertanyaan atau bantuan</p>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
                         {contacts.map((contact, index) => (

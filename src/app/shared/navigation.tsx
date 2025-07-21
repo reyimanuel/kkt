@@ -13,24 +13,24 @@ export function Navigation() {
                 <div className="flex h-16 items-center justify-between">
                     <Link href="/" className="flex items-center space-x-2">
                         <div className="h-8 w-8 bg-green-600 rounded-full flex items-center justify-center">
-                            <span className="text-white font-bold text-sm">GV</span>
+                            <span className="text-white font-bold text-sm">logo</span>
                         </div>
-                        <span className="font-bold text-xl">Greenfield Village</span>
+                        <span className="font-bold text-xl">Desa Suluun</span>
                     </Link>
 
                     {/* Desktop Navigation */}
                     <nav className="hidden md:flex items-center space-x-6">
                         <Link href="/" className="text-sm font-medium hover:text-green-600 transition-colors">
-                            Home
+                            Beranda
                         </Link>
                         <Link href="/information" className="text-sm font-medium hover:text-green-600 transition-colors">
-                            About & History
+                            Profil & Sejarah
                         </Link>
                         <Link href="/announcements" className="text-sm font-medium hover:text-green-600 transition-colors">
-                            Events & News
+                            Berita & Acara
                         </Link>
                         <Link href="/complaints" className="text-sm font-medium hover:text-green-600 transition-colors">
-                            Submit Complaint
+                            Ajukan Pengaduan
                         </Link>
                     </nav>
 
@@ -52,28 +52,28 @@ export function Navigation() {
                                 className="text-sm font-medium hover:text-green-600 transition-colors"
                                 onClick={() => setIsOpen(false)}
                             >
-                                Home
+                                Beranda
                             </Link>
                             <Link
                                 href="/information"
                                 className="text-sm font-medium hover:text-green-600 transition-colors"
                                 onClick={() => setIsOpen(false)}
                             >
-                                About & History
+                                Profil & Sejarah
                             </Link>
                             <Link
                                 href="/announcements"
                                 className="text-sm font-medium hover:text-green-600 transition-colors"
                                 onClick={() => setIsOpen(false)}
                             >
-                                Events & News
+                                Berita & Acara
                             </Link>
                             <Link
                                 href="/complaints"
                                 className="text-sm font-medium hover:text-green-600 transition-colors"
                                 onClick={() => setIsOpen(false)}
                             >
-                                Submit Complaint
+                                Ajukan Pengaduan
                             </Link>
                         </nav>
                     </div>

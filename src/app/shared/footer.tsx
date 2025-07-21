@@ -5,86 +5,60 @@ export function Footer() {
     return (
         <footer className="bg-gray-50 border-t">
             <div className="container mx-auto px-4 py-12">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div className="space-y-4">
                         <div className="flex items-center space-x-2">
                             <div className="h-8 w-8 bg-green-600 rounded-full flex items-center justify-center">
-                                <span className="text-white font-bold text-sm">GV</span>
+                                <span className="text-white font-bold text-sm">logo</span>
                             </div>
-                            <span className="font-bold text-lg">Greenfield Village</span>
+                            <span className="font-bold text-lg">Desa Suluun</span>
                         </div>
-                        <p className="text-sm text-gray-600">A peaceful community where tradition meets progress.</p>
+                        <p className="text-sm text-gray-600">Komunitas yang damai di mana tradisi bertemu kemajuan.</p>
                     </div>
 
                     <div>
-                        <h3 className="font-semibold mb-4">Quick Links</h3>
+                        <h3 className="font-semibold mb-4">Akses Cepat</h3>
                         <ul className="space-y-2 text-sm">
                             <li>
                                 <Link href="/" className="text-gray-600 hover:text-green-600 transition-colors">
-                                    Home
+                                    Beranda
                                 </Link>
                             </li>
                             <li>
                                 <Link href="/information" className="text-gray-600 hover:text-green-600 transition-colors">
-                                    Village History
+                                    Profil & Sejarah
                                 </Link>
                             </li>
                             <li>
                                 <Link href="/announcements" className="text-gray-600 hover:text-green-600 transition-colors">
-                                    Events & News
+                                    Berita & Acara
                                 </Link>
                             </li>
                             <li>
                                 <Link href="/complaints" className="text-gray-600 hover:text-green-600 transition-colors">
-                                    Submit Complaint
+                                    Ajukan Pengaduan
                                 </Link>
                             </li>
                         </ul>
                     </div>
 
                     <div>
-                        <h3 className="font-semibold mb-4">Services</h3>
-                        <ul className="space-y-2 text-sm">
-                            <li>
-                                <Link href="#" className="text-gray-600 hover:text-green-600 transition-colors">
-                                    Village Council
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="#" className="text-gray-600 hover:text-green-600 transition-colors">
-                                    Public Works
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="#" className="text-gray-600 hover:text-green-600 transition-colors">
-                                    Parks & Recreation
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="#" className="text-gray-600 hover:text-green-600 transition-colors">
-                                    Emergency Services
-                                </Link>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h3 className="font-semibold mb-4">Contact Info</h3>
+                        <h3 className="font-semibold mb-4">Info Kontak</h3>
                         <div className="space-y-3 text-sm">
                             <div className="flex items-center gap-2">
                                 <Phone className="h-4 w-4" />
-                                <span className="text-gray-600">(555) 123-4567</span>
+                                <span className="text-gray-600">+62 813-4005-3202</span>
                             </div>
                             <div className="flex items-center gap-2">
                                 <Mail className="h-4 w-4" />
-                                <span className="text-gray-600">info@greenfieldvillage.gov</span>
+                                <span className="text-gray-600">desasuluun@gmail.com</span>
                             </div>
                             <div className="flex items-center gap-2">
                                 <MapPin className="h-4 w-4" />
                                 <span className="text-gray-600">
-                                    123 Main Street
+                                    Jl. Raya Desa Suluun No. 123, Kecamatan Suluun, Kabupaten Bernat, Provinsi Juna
                                     <br />
-                                    Greenfield Village, ST 12345
+                                    Desa Suluun, Kabupaten bernat, Provinsi Juna
                                 </span>
                             </div>
                         </div>
@@ -92,7 +66,7 @@ export function Footer() {
                 </div>
 
                 <div className="border-t mt-8 pt-8 text-center">
-                    <p className="text-sm text-gray-600">© {new Date().getFullYear()} Greenfield Village. All rights reserved.</p>
+                    <p className="text-sm text-gray-600">© {new Date().getFullYear()} Desa Suluun. All rights reserved.</p>
                 </div>
             </div>
         </footer>
