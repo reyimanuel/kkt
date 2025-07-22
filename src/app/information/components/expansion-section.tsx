@@ -1,132 +1,259 @@
 export function ExpansionSection() {
-    const expansionPeriods = [
-        {
-            period: "1880-1900",
-            title: "Early Growth",
-            description: "Population doubled from 200 to 400 residents. First school and health clinic established.",
-            achievements: [
-                "First elementary school built",
-                "Village health clinic opened",
-                "Main road constructed",
-                "Market area established",
+    const villageExpansion = {
+        originalDivision: {
+            date: "14 Februari 1978",
+            description: "Desa Suluun dibagi menjadi 2 bagian",
+            divisions: [
+                { original: "Desa Suluun Timur", renamed: "Desa Suluun Satu" },
+                { original: "Desa Suluun Barat", renamed: "Desa Suluun Dua" },
             ],
         },
-        {
-            period: "1900-1920",
-            title: "Infrastructure Development",
-            description: "Major infrastructure projects improved quality of life and connected village to regional networks.",
-            achievements: [
-                "Electric power lines installed",
-                "Telephone service introduced",
-                "Water distribution system",
-                "Village hall constructed",
-            ],
+        secondDivision: {
+            date: "14 Februari 2007",
+            description:
+                "Karena kemajuan, perluasan pemukiman, pertumbuhan penduduk yang pesat, dan peningkatan kesejahteraan masyarakat, Desa Suluun Satu kemudian dibagi lagi",
+            result: ["Desa Suluun Satu", "Desa Suluun Tiga"],
         },
-        {
-            period: "1920-1940",
-            title: "Economic Expansion",
-            description: "Agricultural modernization and small business development boosted the local economy.",
-            achievements: [
-                "Cooperative farming established",
-                "Rice mill constructed",
-                "Small businesses flourished",
-                "Banking services introduced",
-            ],
-        },
-        {
-            period: "1940-1960",
-            title: "Post-War Reconstruction",
-            description: "Recovery and rebuilding after World War II, with focus on modernization and development.",
-            achievements: [
-                "War damage repaired",
-                "Modern farming techniques",
-                "Improved transportation",
-                "Educational expansion",
-            ],
-        },
-        {
-            period: "1960-1980",
-            title: "Modernization Era",
-            description: "Significant modernization with improved infrastructure and expanded public services.",
-            achievements: [
-                "Paved roads completed",
-                "Modern water system",
-                "High school established",
-                "Healthcare center upgraded",
-            ],
-        },
-        {
-            period: "1980-2000",
-            title: "Technological Integration",
-            description: "Introduction of modern technology and communication systems transformed village life.",
-            achievements: [
-                "Internet connectivity",
-                "Mobile phone coverage",
-                "Computer literacy programs",
-                "Modern farming equipment",
-            ],
-        },
-        {
-            period: "2000-Present",
-            title: "Sustainable Development",
-            description: "Focus on sustainable development, environmental protection, and digital transformation.",
-            achievements: [
-                "Solar power projects",
-                "Waste management system",
-                "Digital governance",
-                "Eco-tourism development",
-            ],
-        },
+    }
+
+    const suluunSatuLeaders = [
+        { name: "Bonteku A. Lumempow", position: "Kepala Desa", period: "1978" },
+        { name: "Semuel J. Tangkulung", position: "Pejabat Hukum Tua", period: "1978 – 1979" },
+        { name: "Jocke J. Tuwo", position: "Kepala Desa", period: "1979 – 1982" },
+        { name: "Jootje J. Tengor", position: "Pejabat Kepala Desa", period: "1982 – 1984" },
+        { name: "Johan A. Tuwo", position: "Kepala Desa", period: "1984 – 1993" },
+        { name: "Engel N. Walangitan", position: "Pejabat Kepala Desa", period: "1993" },
+        { name: "Johan A. Tuwo", position: "Kepala Desa", period: "1993 – 2002" },
+        { name: "Jhonry Regar", position: "Kepala Desa", period: "2003" },
+        { name: "Johan F. Igir", position: "Plt. Hukum Tua", period: "2003" },
+        { name: "Johan A. Tuwo", position: "Kepala Desa", period: "2004 – 2008" },
+    ]
+
+    const expansionCommittee = [
+        { position: "Ketua", name: "Wolter Rindengan" },
+        { position: "Wakil Ketua", name: "Lexi Walangitan" },
+        { position: "Sekretaris", name: "Raymond S.A. Tengor" },
+    ]
+
+    const suluunTigaOfficials = [
+        { position: "Sekretaris Desa", name: "Raymond S.A. Tengor" },
+        { position: "Kaur Pemerintahan", name: "Marthen Langi" },
+        { position: "Kaur Pembangunan", name: "Zony Mantur" },
+        { position: "Kaur Keuangan", name: "Joke Runtuwene" },
+        { position: "Kepala Jaga I", name: "Joke Momongan" },
+        { position: "Meweteng Jaga I", name: "Jefry Rauan" },
+        { position: "Kepala Jaga II", name: "Albert Kowal" },
+        { position: "Meweteng Jaga II", name: "Servius Wior" },
+        { position: "Kepala Jaga III", name: "Tomeks Sumual" },
+        { position: "Meweteng Jaga III", name: "Jutje Langi" },
+        { position: "Kepala Jaga IV", name: "Ventje Kowal" },
+        { position: "Meweteng Jaga IV", name: "Wildat Monintja" },
+        { position: "Kepala Jaga V", name: "Jhon Tumober" },
+        { position: "Meweteng Jaga V", name: "Welem Pomantow" },
+    ]
+
+    const suluunTigaLeaders = [
+        { name: "Lexi Walangitan", position: "Pejabat Hukum Tua", period: "2007 – 2008" },
+        { name: "Noudy N. Runtuwene", position: "Hukum Tua", period: "2008 – 2015" },
+        { name: "Frederik J. Pomantow, SPd, MSi", position: "Pejabat Hukum Tua", period: "2015 – 2016" },
+        { name: "Jery Robert Regar, S.Sos", position: "Hukum Tua", period: "2016 – 2022" },
+        { name: "Ellen I. Tuwo, SE", position: "Pejabat Hukum Tua", period: "2022 – Present" },
     ]
 
     return (
         <section className="py-16">
             <div className="container mx-auto px-4">
-                <div className="max-w-4xl mx-auto">
+                <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-12">
-                        <h2 className="text-3xl font-bold mb-4">Village Expansion & Development</h2>
-                        <p className="text-gray-600 text-lg">Over 140 years of continuous growth and modernization</p>
+                        <h2 className="text-3xl font-bold mb-4">Sejarah Pemekaran Desa</h2>
+                        <p className="text-gray-600 text-lg">
+                            Informasi sejarah pemekaran desa Suluun
+                        </p>
                     </div>
 
-                    <div className="space-y-8">
-                        {expansionPeriods.map((period, index) => (
-                            <div key={index} className="bg-white rounded-lg border border-gray-200 shadow-sm p-6">
-                                <div className="flex items-center gap-3 mb-4">
-                                    <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
-                                        {period.period}
-                                    </span>
-                                    <h3 className="text-xl font-bold">{period.title}</h3>
-                                </div>
-                                <p className="text-gray-600 mb-4">{period.description}</p>
-                                <div>
-                                    <h4 className="font-semibold mb-2">Key Achievements:</h4>
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                                        {period.achievements.map((achievement, idx) => (
-                                            <div key={idx} className="flex items-center gap-2">
-                                                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                                                <span className="text-sm text-gray-600">{achievement}</span>
-                                            </div>
-                                        ))}
+                    {/* First Division - 1978 */}
+                    <div className="mb-16">
+                        <div className="bg-blue-50 border border-blue-200 rounded-lg p-8 mb-8">
+                            <div className="flex items-center gap-3 mb-4">
+                                <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
+                                    {villageExpansion.originalDivision.date}
+                                </span>
+                                <h3 className="text-2xl font-bold text-blue-900">Pemekaran Desa Pertama</h3>
+                            </div>
+                            <p className="text-blue-800 mb-6">{villageExpansion.originalDivision.description}</p>
+
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                {villageExpansion.originalDivision.divisions.map((division, index) => (
+                                    <div key={index} className="bg-white rounded-lg p-6 border border-blue-200">
+                                        <div className="text-center">
+                                            <div className="text-lg font-semibold text-gray-700 mb-2">Nama desa sebelumnya:</div>
+                                            <div className="text-xl font-bold text-blue-700 mb-4">{division.original}</div>
+                                            <div className="text-sm text-gray-600 mb-2">Berubah menjadi</div>
+                                            <div className="text-lg font-bold text-green-700">{division.renamed}</div>
+                                        </div>
                                     </div>
-                                </div>
+                                ))}
                             </div>
-                        ))}
+                        </div>
                     </div>
 
-                    <div className="mt-12 bg-green-50 border border-green-200 rounded-lg p-6">
-                        <h3 className="text-xl font-bold mb-4 text-green-900">Current Status</h3>
+                    {/* Suluun Satu Leaders */}
+                    <div className="mb-16">
+                        <h3 className="text-2xl font-bold mb-8 text-center">Kepala Desa Suluun Satu</h3>
+                        <div className="bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden">
+                            <div className="overflow-x-auto">
+                                <table className="w-full">
+                                    <thead className="bg-gray-50">
+                                        <tr>
+                                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                No.
+                                            </th>
+                                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                Nama
+                                            </th>
+                                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                Posisi
+                                            </th>
+                                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                Periode
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody className="bg-white divide-y divide-gray-200">
+                                        {suluunSatuLeaders.map((leader, index) => (
+                                            <tr key={index} className="hover:bg-gray-50">
+                                                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{index + 1}</td>
+                                                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{leader.name}</td>
+                                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">{leader.position}</td>
+                                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">{leader.period}</td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Second Division - 2007 */}
+                    <div className="mb-16">
+                        <div className="bg-green-50 border border-green-200 rounded-lg p-8">
+                            <div className="flex items-center gap-3 mb-4">
+                                <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800">
+                                    {villageExpansion.secondDivision.date}
+                                </span>
+                                <h3 className="text-2xl font-bold text-green-900">Pemekaran Kedua Desa</h3>
+                            </div>
+                            <p className="text-green-800 mb-6">{villageExpansion.secondDivision.description}</p>
+
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                                {villageExpansion.secondDivision.result.map((village, index) => (
+                                    <div key={index} className="bg-white rounded-lg p-6 border border-green-200 text-center">
+                                        <div className="text-xl font-bold text-green-700">{village}</div>
+                                    </div>
+                                ))}
+                            </div>
+
+                            <div className="bg-white rounded-lg p-6 border border-green-200">
+                                <h4 className="text-lg font-bold mb-4 text-green-900">Panitia Pemekaran</h4>
+                                <p className="text-sm text-green-700 mb-4">
+                                    Berdasarkan Surat Keputusan Badan Permusyawaratan Desa, dibentuknya panitia pemekaran
+                                </p>
+                                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                    {expansionCommittee.map((member, index) => (
+                                        <div key={index} className="text-center p-4 bg-green-50 rounded-lg">
+                                            <div className="font-semibold text-green-800">{member.position}</div>
+                                            <div className="text-green-700">{member.name}</div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Legal Framework */}
+                    <div className="mb-16">
+                        <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+                            <h4 className="text-lg font-bold mb-3 text-yellow-900">Kerangka Hukum</h4>
+                            <p className="text-yellow-800 mb-4">
+                                Pemekaran desa ini resmi ditetapkan melalui Peraturan Daerah Kabupaten Minahasa Selatan (PERDA)
+                                No. 60 Tahun 2006 tentang Pembentukan 11 Desa, salah satunya adalah Desa Suluun Tiga.
+                            </p>
+                            <p className="text-yellow-800">
+                                Perluasan tersebut diresmikan secara resmi oleh Bupati Minahasa Selatan,
+                                <strong> Drs. Ramoy Markus Luntungan</strong> yang juga ditunjuk sebagai Penjabat Kepala Desa (Pejabat Hukum
+                                Tua) dari Desa Suluun Tiga, <strong>Bpk. Lexi Walangitan</strong>.
+                            </p>
+                        </div>
+                    </div>
+
+                    {/* Suluun Tiga Village Officials */}
+                    <div className="mb-16">
+                        <h3 className="text-2xl font-bold mb-8 text-center">Perangkat Desa Suluun Tiga</h3>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                            {suluunTigaOfficials.map((official, index) => (
+                                <div key={index} className="bg-white rounded-lg border border-gray-200 shadow-sm p-4">
+                                    <div className="text-sm font-medium text-gray-600 mb-1">{official.position}</div>
+                                    <div className="text-lg font-bold text-gray-900">{official.name}</div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Suluun Tiga Leaders */}
+                    <div className="mb-16">
+                        <h3 className="text-2xl font-bold mb-8 text-center">Hukum Tua yang memimpin desa Suluun Tiga</h3>
+                        <div className="bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden">
+                            <div className="overflow-x-auto">
+                                <table className="w-full">
+                                    <thead className="bg-gray-50">
+                                        <tr>
+                                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                No.
+                                            </th>
+                                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                Nama
+                                            </th>
+                                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                Posisi
+                                            </th>
+                                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                Periode
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody className="bg-white divide-y divide-gray-200">
+                                        {suluunTigaLeaders.map((leader, index) => (
+                                            <tr key={index} className="hover:bg-gray-50">
+                                                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{index + 1}</td>
+                                                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{leader.name}</td>
+                                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">{leader.position}</td>
+                                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">{leader.period}</td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Current Status */}
+                    <div className="bg-purple-50 border border-purple-200 rounded-lg p-8">
+                        <h3 className="text-2xl font-bold mb-4 text-purple-900">Struktur Desa</h3>
+                        <p className="text-purple-800 mb-6">
+                            Saat ini, Desa Suluun yang asli telah berkembang menjadi tiga desa administratif terpisah:
+                        </p>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                            <div className="text-center">
-                                <div className="text-2xl font-bold text-green-700">2,847</div>
-                                <div className="text-sm text-green-600">Current Population</div>
+                            <div className="bg-white rounded-lg p-6 border border-purple-200 text-center">
+                                <div className="text-xl font-bold text-purple-700 mb-2">Desa Suluun Satu</div>
+                                <div className="text-sm text-purple-600">Dibentuk: 1978</div>
                             </div>
-                            <div className="text-center">
-                                <div className="text-2xl font-bold text-green-700">450</div>
-                                <div className="text-sm text-green-600">Households</div>
+                            <div className="bg-white rounded-lg p-6 border border-purple-200 text-center">
+                                <div className="text-xl font-bold text-purple-700 mb-2">Desa Suluun Dua</div>
+                                <div className="text-sm text-purple-600">Dibentuk: 1978</div>
                             </div>
-                            <div className="text-center">
-                                <div className="text-2xl font-bold text-green-700">12</div>
-                                <div className="text-sm text-green-600">Square Kilometers</div>
+                            <div className="bg-white rounded-lg p-6 border border-purple-200 text-center">
+                                <div className="text-xl font-bold text-purple-700 mb-2">Desa Suluun Tiga</div>
+                                <div className="text-sm text-purple-600">Dibentuk: 2007</div>
                             </div>
                         </div>
                     </div>

@@ -120,7 +120,7 @@ export default function ComplaintsPage() {
             <HeroSection
                 title="Submit a Complaint"
                 subtitle="We value your feedback and are committed to addressing community concerns promptly"
-                backgroundGradient="from-red-600 to-orange-600"
+                backgroundGradient="from-purple-600 to-green-600"
             />
 
             {/* Important Information */}

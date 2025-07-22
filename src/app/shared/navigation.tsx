@@ -2,10 +2,18 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { Menu, X } from "lucide-react"
+import { Menu, X, ChevronDown } from "lucide-react"
 
 export function Navigation() {
     const [isOpen, setIsOpen] = useState(false)
+    const [isInformationOpen, setIsInformationOpen] = useState(false)
+
+    const informationLinks = [
+        { href: "/information/establishment", label: "Sejarah Perintisan Desa" },
+        { href: "/information/government", label: "Sejarah Pemerintahan" },
+        { href: "/information/expansion", label: "Pemekaran Desa" },
+        { href: "/information/gallery", label: "Galeri Desa" },
+    ]
 
     return (
         <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
@@ -13,7 +21,7 @@ export function Navigation() {
                 <div className="flex h-16 items-center justify-between">
                     <Link href="/" className="flex items-center space-x-2">
                         <div className="h-8 w-8 bg-green-600 rounded-full flex items-center justify-center">
-                            <span className="text-white font-bold text-sm">logo</span>
+                            <span className="text-white font-bold text-sm">DS</span>
                         </div>
                         <span className="font-bold text-xl">Desa Suluun</span>
                     </Link>
@@ -23,14 +31,47 @@ export function Navigation() {
                         <Link href="/" className="text-sm font-medium hover:text-green-600 transition-colors">
                             Beranda
                         </Link>
-                        <Link href="/information" className="text-sm font-medium hover:text-green-600 transition-colors">
-                            Profil & Sejarah
-                        </Link>
+
+                        {/* Information Dropdown */}
+                        <div className="relative group">
+                            <button
+                                className="flex items-center gap-1 text-sm font-medium hover:text-green-600 transition-colors"
+                                onMouseEnter={() => setIsInformationOpen(true)}
+                                onMouseLeave={() => setIsInformationOpen(false)}
+                            >
+                                <Link href="/information" className="text-sm font-medium hover:text-green-600 transition-colors">
+                                    Informasi
+                                </Link>
+                                <ChevronDown className="h-4 w-4" />
+                            </button>
+
+                            {/* Dropdown Menu */}
+                            <div
+                                className={`absolute top-full left-0 mt-1 w-64 bg-white border border-gray-200 rounded-md shadow-lg transition-all duration-200 ${isInformationOpen ? "opacity-100 visible" : "opacity-0 invisible"
+                                    }`}
+                                onMouseEnter={() => setIsInformationOpen(true)}
+                                onMouseLeave={() => setIsInformationOpen(false)}
+                            >
+                                <div className="py-2">
+                                    {informationLinks.map((link, index) => (
+                                        <Link
+                                            key={index}
+                                            href={link.href}
+                                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-green-600 transition-colors"
+                                            onClick={() => setIsInformationOpen(false)}
+                                        >
+                                            {link.label}
+                                        </Link>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+
                         <Link href="/announcements" className="text-sm font-medium hover:text-green-600 transition-colors">
                             Berita & Acara
                         </Link>
                         <Link href="/complaints" className="text-sm font-medium hover:text-green-600 transition-colors">
-                            Ajukan Pengaduan
+                            Masukkan Pengaduan
                         </Link>
                     </nav>
 
@@ -54,13 +95,24 @@ export function Navigation() {
                             >
                                 Beranda
                             </Link>
-                            <Link
-                                href="/information"
-                                className="text-sm font-medium hover:text-green-600 transition-colors"
-                                onClick={() => setIsOpen(false)}
-                            >
-                                Profil & Sejarah
-                            </Link>
+
+                            {/* Mobile Information Section */}
+                            <div>
+                                <div className="text-sm font-medium text-gray-900 mb-2">Information</div>
+                                <div className="pl-4 space-y-2">
+                                    {informationLinks.map((link, index) => (
+                                        <Link
+                                            key={index}
+                                            href={link.href}
+                                            className="block text-sm text-gray-600 hover:text-green-600 transition-colors"
+                                            onClick={() => setIsOpen(false)}
+                                        >
+                                            {link.label}
+                                        </Link>
+                                    ))}
+                                </div>
+                            </div>
+
                             <Link
                                 href="/announcements"
                                 className="text-sm font-medium hover:text-green-600 transition-colors"
@@ -73,7 +125,7 @@ export function Navigation() {
                                 className="text-sm font-medium hover:text-green-600 transition-colors"
                                 onClick={() => setIsOpen(false)}
                             >
-                                Ajukan Pengaduan
+                                Masukkan Pengaduan
                             </Link>
                         </nav>
                     </div>

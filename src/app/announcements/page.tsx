@@ -37,7 +37,7 @@ export default function AnnouncementsPage() {
       <HeroSection
         title="Village Announcements & Events"
         subtitle="Stay connected with the latest news, events, and happenings in our community"
-        backgroundGradient="from-purple-600 to-pink-600"
+        backgroundGradient="from-green-600 to-purple-600"
       />
 
       <FeaturedEvent {...featuredEventData} />
