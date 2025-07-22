@@ -98,19 +98,30 @@ export function Navigation() {
 
                             {/* Mobile Information Section */}
                             <div>
-                                <div className="text-sm font-medium text-gray-900 mb-2">Information</div>
-                                <div className="pl-4 space-y-2">
-                                    {informationLinks.map((link, index) => (
-                                        <Link
-                                            key={index}
-                                            href={link.href}
-                                            className="block text-sm text-gray-600 hover:text-green-600 transition-colors"
-                                            onClick={() => setIsOpen(false)}
-                                        >
-                                            {link.label}
-                                        </Link>
-                                    ))}
-                                </div>
+                                <button
+                                    className="flex items-center justify-between w-full text-sm font-medium text-gray-900 hover:text-green-600 transition-colors py-2"
+                                    onClick={() => setIsInformationOpen(!isInformationOpen)}
+                                >
+                                    Informasi
+                                    <ChevronDown className={`h-4 w-4 transition-transform ${isInformationOpen ? "rotate-180" : ""}`} />
+                                </button>
+                                {isInformationOpen && ( // Tampilkan sub-menu hanya jika isInformationOpen true
+                                    <div className="pl-4 space-y-2">
+                                        {informationLinks.map((link, index) => (
+                                            <Link
+                                                key={index}
+                                                href={link.href}
+                                                className="block text-sm text-gray-600 hover:text-green-600 transition-colors py-1"
+                                                onClick={() => {
+                                                    setIsOpen(false) // Tutup menu utama
+                                                    setIsInformationOpen(false) // Tutup dropdown informasi
+                                                }}
+                                            >
+                                                {link.label}
+                                            </Link>
+                                        ))}
+                                    </div>
+                                )}
                             </div>
 
                             <Link
