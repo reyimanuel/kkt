@@ -6,8 +6,8 @@ export default function EstablishmentPage() {
   return (
     <div className="min-h-screen">
       <HeroSection
-        title="Village Establishment"
-        subtitle="From a small settlement to a thriving community - the formal establishment of our village"
+        title="Pendirian Desa Suluun"
+        subtitle="Dari sebuah komunitas kecil, hingga sebuah desa"
         backgroundGradient="from-purple-600 to-blue-600"
       />
 
