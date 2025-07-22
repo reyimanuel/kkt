@@ -39,7 +39,7 @@ export function GovernmentSection() {
                 <div className="max-w-4xl mx-auto mb-12">
                     <h3 className="text-2xl font-bold mb-4">Tonaas-Tonaas Suluun</h3>
                     <p className="text-gray-600 mb-4">
-                        Desa Suluun pada mulanya dipimpin oleh Tonaas-Tonaas yan dianggap kuat dan mampu memimpin rakyat terutama dalam menghadapi gangguan musuh
+                        Desa Suluun pada mulanya dipimpin oleh Tonaas-Tonaas yang dianggap kuat dan mampu memimpin rakyat terutama dalam menghadapi gangguan musuh
                     </p>
                     <ul className="list-disc list-inside space-y-2">
                         {tonaas.map((tonaas, index) => (
