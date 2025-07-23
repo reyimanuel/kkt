@@ -66,30 +66,30 @@ export function ExpansionSection() {
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl font-bold mb-4">Sejarah Pemekaran Desa</h2>
-                        <p className="text-gray-600 text-lg">
+                        <p className="text-gray-100 text-lg">
                             Informasi sejarah pemekaran desa Suluun
                         </p>
                     </div>
 
                     {/* First Division - 1978 */}
                     <div className="mb-16">
-                        <div className="bg-blue-50 border border-blue-200 rounded-lg p-8 mb-8">
+                        <div className="bg-blue-800 border border-blue-900 rounded-lg p-8 mb-8">
                             <div className="flex items-center gap-3 mb-4">
-                                <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
+                                <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-600 text-blue-100">
                                     {villageExpansion.originalDivision.date}
                                 </span>
-                                <h3 className="text-2xl font-bold text-blue-900">Pemekaran Desa Pertama</h3>
+                                <h3 className="text-2xl font-bold text-blue-100">Pemekaran Desa Pertama</h3>
                             </div>
-                            <p className="text-blue-800 mb-6">{villageExpansion.originalDivision.description}</p>
+                            <p className="text-blue-100 mb-6">{villageExpansion.originalDivision.description}</p>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 {villageExpansion.originalDivision.divisions.map((division, index) => (
-                                    <div key={index} className="bg-white rounded-lg p-6 border border-blue-200">
+                                    <div key={index} className="bg-gray-700 rounded-lg p-6 border border-blue-700">
                                         <div className="text-center">
-                                            <div className="text-lg font-semibold text-gray-700 mb-2">Nama desa sebelumnya:</div>
-                                            <div className="text-xl font-bold text-blue-700 mb-4">{division.original}</div>
-                                            <div className="text-sm text-gray-600 mb-2">Berubah menjadi</div>
-                                            <div className="text-lg font-bold text-green-700">{division.renamed}</div>
+                                            <div className="text-lg font-semibold text-gray-200 mb-2">Nama desa sebelumnya:</div>
+                                            <div className="text-xl font-bold text-blue-200 mb-4">{division.original}</div>
+                                            <div className="text-sm text-gray-200 mb-2">Berubah menjadi</div>
+                                            <div className="text-lg font-bold text-green-200">{division.renamed}</div>
                                         </div>
                                     </div>
                                 ))}
@@ -103,29 +103,29 @@ export function ExpansionSection() {
                         <div className="bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden">
                             <div className="overflow-x-auto">
                                 <table className="w-full">
-                                    <thead className="bg-gray-50">
+                                    <thead className="bg-gray-800">
                                         <tr>
-                                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
                                                 No.
                                             </th>
-                                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
                                                 Nama
                                             </th>
-                                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
                                                 Posisi
                                             </th>
-                                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
                                                 Periode
                                             </th>
                                         </tr>
                                     </thead>
-                                    <tbody className="bg-white divide-y divide-gray-200">
+                                    <tbody className="bg-gray-600 divide-y divide-gray-200">
                                         {suluunSatuLeaders.map((leader, index) => (
-                                            <tr key={index} className="hover:bg-gray-50">
-                                                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{index + 1}</td>
-                                                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{leader.name}</td>
-                                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">{leader.position}</td>
-                                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">{leader.period}</td>
+                                            <tr key={index} className="hover:bg-gray-900">
+                                                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-200">{index + 1}</td>
+                                                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-200">{leader.name}</td>
+                                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-100">{leader.position}</td>
+                                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-100">{leader.period}</td>
                                             </tr>
                                         ))}
                                     </tbody>
@@ -136,33 +136,33 @@ export function ExpansionSection() {
 
                     {/* Second Division - 2007 */}
                     <div className="mb-16">
-                        <div className="bg-green-50 border border-green-200 rounded-lg p-8">
+                        <div className="bg-green-900 border border-green-800 rounded-lg p-8">
                             <div className="flex items-center gap-3 mb-4">
-                                <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800">
+                                <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-600 text-green-100">
                                     {villageExpansion.secondDivision.date}
                                 </span>
-                                <h3 className="text-2xl font-bold text-green-900">Pemekaran Kedua Desa</h3>
+                                <h3 className="text-2xl font-bold text-green-100">Pemekaran Kedua Desa</h3>
                             </div>
-                            <p className="text-green-800 mb-6">{villageExpansion.secondDivision.description}</p>
+                            <p className="text-green-100 mb-6">{villageExpansion.secondDivision.description}</p>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                                 {villageExpansion.secondDivision.result.map((village, index) => (
-                                    <div key={index} className="bg-white rounded-lg p-6 border border-green-200 text-center">
-                                        <div className="text-xl font-bold text-green-700">{village}</div>
+                                    <div key={index} className="bg-gray-600 rounded-lg p-6 border border-green-700 text-center">
+                                        <div className="text-xl font-bold text-gray-100">{village}</div>
                                     </div>
                                 ))}
                             </div>
 
-                            <div className="bg-white rounded-lg p-6 border border-green-200">
-                                <h4 className="text-lg font-bold mb-4 text-green-900">Panitia Pemekaran</h4>
-                                <p className="text-sm text-green-700 mb-4">
+                            <div className="bg-gray-600 rounded-lg p-6 border border-green-700">
+                                <h4 className="text-lg font-bold mb-4 text-gray-100">Panitia Pemekaran</h4>
+                                <p className="text-sm text-gray-100 mb-4">
                                     Berdasarkan Surat Keputusan Badan Permusyawaratan Desa, dibentuknya panitia pemekaran
                                 </p>
                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                                     {expansionCommittee.map((member, index) => (
-                                        <div key={index} className="text-center p-4 bg-green-50 rounded-lg">
-                                            <div className="font-semibold text-green-800">{member.position}</div>
-                                            <div className="text-green-700">{member.name}</div>
+                                        <div key={index} className="text-center p-4 bg-green-700 rounded-lg">
+                                            <div className="font-semibold text-green-100">{member.position}</div>
+                                            <div className="text-green-100">{member.name}</div>
                                         </div>
                                     ))}
                                 </div>
@@ -191,9 +191,9 @@ export function ExpansionSection() {
                         <h3 className="text-2xl font-bold mb-8 text-center">Perangkat Desa Suluun Tiga</h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                             {suluunTigaOfficials.map((official, index) => (
-                                <div key={index} className="bg-white rounded-lg border border-gray-200 shadow-sm p-4">
-                                    <div className="text-sm font-medium text-gray-600 mb-1">{official.position}</div>
-                                    <div className="text-lg font-bold text-gray-900">{official.name}</div>
+                                <div key={index} className="bg-gray-600 rounded-lg border border-gray-800 shadow-sm p-4">
+                                    <div className="text-sm font-medium text-gray-100 mb-1">{official.position}</div>
+                                    <div className="text-lg font-bold text-gray-100">{official.name}</div>
                                 </div>
                             ))}
                         </div>
@@ -205,29 +205,29 @@ export function ExpansionSection() {
                         <div className="bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden">
                             <div className="overflow-x-auto">
                                 <table className="w-full">
-                                    <thead className="bg-gray-50">
+                                    <thead className="bg-gray-800">
                                         <tr>
-                                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
                                                 No.
                                             </th>
-                                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
                                                 Nama
                                             </th>
-                                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
                                                 Posisi
                                             </th>
-                                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
                                                 Periode
                                             </th>
                                         </tr>
                                     </thead>
-                                    <tbody className="bg-white divide-y divide-gray-200">
+                                    <tbody className="bg-gray-600 divide-y divide-gray-200">
                                         {suluunTigaLeaders.map((leader, index) => (
-                                            <tr key={index} className="hover:bg-gray-50">
-                                                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{index + 1}</td>
-                                                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{leader.name}</td>
-                                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">{leader.position}</td>
-                                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">{leader.period}</td>
+                                            <tr key={index} className="hover:bg-gray-800">
+                                                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-200">{index + 1}</td>
+                                                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-200">{leader.name}</td>
+                                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-100">{leader.position}</td>
+                                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-100">{leader.period}</td>
                                             </tr>
                                         ))}
                                     </tbody>
@@ -237,23 +237,23 @@ export function ExpansionSection() {
                     </div>
 
                     {/* Current Status */}
-                    <div className="bg-purple-50 border border-purple-200 rounded-lg p-8">
-                        <h3 className="text-2xl font-bold mb-4 text-purple-900">Struktur Desa</h3>
-                        <p className="text-purple-800 mb-6">
+                    <div className="bg-purple-800 border border-purple-900 rounded-lg p-8">
+                        <h3 className="text-2xl font-bold mb-4 text-purple-100">Struktur Desa</h3>
+                        <p className="text-purple-100 mb-6">
                             Saat ini, Desa Suluun yang asli telah berkembang menjadi tiga desa administratif terpisah:
                         </p>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                            <div className="bg-white rounded-lg p-6 border border-purple-200 text-center">
-                                <div className="text-xl font-bold text-purple-700 mb-2">Desa Suluun Satu</div>
-                                <div className="text-sm text-purple-600">Dibentuk: 1978</div>
+                            <div className="bg-gray-600 rounded-lg p-6 border border-purple-800 text-center">
+                                <div className="text-xl font-bold text-purple-100 mb-2">Desa Suluun Satu</div>
+                                <div className="text-sm text-purple-100">Dibentuk: 1978</div>
                             </div>
-                            <div className="bg-white rounded-lg p-6 border border-purple-200 text-center">
-                                <div className="text-xl font-bold text-purple-700 mb-2">Desa Suluun Dua</div>
-                                <div className="text-sm text-purple-600">Dibentuk: 1978</div>
+                            <div className="bg-gray-600 rounded-lg p-6 border border-purple-800 text-center">
+                                <div className="text-xl font-bold text-purple-100 mb-2">Desa Suluun Dua</div>
+                                <div className="text-sm text-purple-100">Dibentuk: 1978</div>
                             </div>
-                            <div className="bg-white rounded-lg p-6 border border-purple-200 text-center">
-                                <div className="text-xl font-bold text-purple-700 mb-2">Desa Suluun Tiga</div>
-                                <div className="text-sm text-purple-600">Dibentuk: 2007</div>
+                            <div className="bg-gray-600 rounded-lg p-6 border border-purple-800 text-center">
+                                <div className="text-xl font-bold text-purple-100 mb-2">Desa Suluun Tiga</div>
+                                <div className="text-sm text-purple-100">Dibentuk: 2007</div>
                             </div>
                         </div>
                     </div>

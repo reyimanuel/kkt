@@ -16,14 +16,14 @@ export function Navigation() {
     ]
 
     return (
-        <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
+        <header className="sticky top-0 z-50 w-full border-b border-gray-700 backdrop-blur supports-[backdrop-filter]:bg-gray-900/80">
             <div className="container mx-auto px-4">
                 <div className="flex h-16 items-center justify-between">
                     <Link href="/" className="flex items-center space-x-2">
                         <div className="h-8 w-8 bg-green-600 rounded-full flex items-center justify-center">
-                            <span className="text-white font-bold text-sm">DS</span>
+                            <span className="text-white font-bold text-sm">Logo</span>
                         </div>
-                        <span className="font-bold text-xl">Desa Suluun</span>
+                        <span className="font-bold text-xl">Desa Suluun 3</span>
                     </Link>
 
                     {/* Desktop Navigation */}
@@ -47,7 +47,7 @@ export function Navigation() {
 
                             {/* Dropdown Menu */}
                             <div
-                                className={`absolute top-full left-0 mt-1 w-64 bg-white border border-gray-200 rounded-md shadow-lg transition-all duration-200 ${isInformationOpen ? "opacity-100 visible" : "opacity-0 invisible"
+                                className={`absolute top-full left-0 mt-1 w-64 bg-gray-700 border border-gray-800 rounded-md shadow-lg transition-all duration-200 ${isInformationOpen ? "opacity-100 visible" : "opacity-0 invisible"
                                     }`}
                                 onMouseEnter={() => setIsInformationOpen(true)}
                                 onMouseLeave={() => setIsInformationOpen(false)}
@@ -57,7 +57,7 @@ export function Navigation() {
                                         <Link
                                             key={index}
                                             href={link.href}
-                                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-green-600 transition-colors"
+                                            className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-900 hover:text-green-600 transition-colors"
                                             onClick={() => setIsInformationOpen(false)}
                                         >
                                             {link.label}

@@ -7,7 +7,7 @@ export function PioneeringSection() {
                 <div className="max-w-4xl mx-auto">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl font-bold mb-4">Perintisan</h2>
-                        <p className="text-gray-600 text-lg">
+                        <p className="text-gray-300 text-lg">
                             Desa Suluun Tiga terletak di pegunungan dengan ketinggian kurang lebih 450-510 Meter di atas permukaan laut.
                             Bila memasuki Desa Suluun Tiga yaitu dari arah timur, sepanjang jalan terbentang luas panorama alam yang indah
                             dengan hamparan tanaman cengkih yang merupakan tanaman primadona masyarakat Suluun di masa jayanya harga cengkih.
@@ -26,7 +26,7 @@ export function PioneeringSection() {
                         </div>
                         <div>
                             <h3 className="text-2xl font-bold mb-4">TONAAS KOYANSOW</h3>
-                            <p className="text-gray-600">
+                            <p className="text-gray-300">
                                 Tonaas Koyansow adalah Tonaas In Uma (Kepala Pertanian), Bukan pendiri Kampung SULUUN Kemahirannya hanya dibidang Pertanian.
                             </p>
                         </div>
@@ -35,7 +35,7 @@ export function PioneeringSection() {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div className="order-2 lg:order-1">
                             <h3 className="text-2xl font-bold mb-4">TONAAS PALAR</h3>
-                            <p className="text-gray-600">
+                            <p className="text-gray-300">
                                 Tonaas Palar adalah Tonaas Yang mendirikan Kampung. Kemahirannya adalah berburu. Suatu ketika ia sedang mengejar hewan buruannya, ia tiba pada areal yang sekarang menjadi Pemukiman Suluun. Ia mengamati bahwa Lokasi ini
                                 cocok dan baik untuk dijadikan tempat pemukiman. Maka Tonaas Palar menentukan waktu yang baik untuk merintis dan atau mendirikan desa baru dan sebagai bukti ditengah Desa Suluun terdapat WARUGA PALAR
                             </p>

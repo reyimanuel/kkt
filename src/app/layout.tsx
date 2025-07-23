@@ -8,8 +8,8 @@ import { Footer } from "./shared/footer"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-    title: "Desa Suluun - Official Website",
-    description: "Selamat datang di Desa Suluun - Sebuah komunitas yang damai di mana tradisi bertemu dengan kemajuan",
+    title: "Desa Suluun 3 - Official Website",
+    description: "Selamat datang di Desa Suluun 3 - Sebuah komunitas yang damai di mana tradisi bertemu dengan kemajuan",
 }
 
 export default function RootLayout({
@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body className={inter.className}>
+            <body className={`${inter.className} bg-gray-900 text-white`}>
                 <div className="min-h-screen flex flex-col">
                     <Navigation />
                     <main className="flex-1">{children}</main>
