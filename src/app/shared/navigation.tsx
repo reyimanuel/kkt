@@ -77,7 +77,7 @@ export function Navigation() {
 
                     {/* Mobile Menu Button */}
                     <button
-                        className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500"
+                        className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-200 hover:text-gray-300 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500"
                         onClick={() => setIsOpen(!isOpen)}
                     >
                         {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -99,7 +99,7 @@ export function Navigation() {
                             {/* Mobile Information Section */}
                             <div>
                                 <button
-                                    className="flex items-center justify-between w-full text-sm font-medium text-gray-900 hover:text-green-600 transition-colors py-2"
+                                    className="flex items-center justify-between w-full text-sm font-medium text-gray-50 hover:text-green-600 transition-colors py-2"
                                     onClick={() => setIsInformationOpen(!isInformationOpen)}
                                 >
                                     Informasi
@@ -111,7 +111,7 @@ export function Navigation() {
                                             <Link
                                                 key={index}
                                                 href={link.href}
-                                                className="block text-sm text-gray-600 hover:text-green-600 transition-colors py-1"
+                                                className="block text-sm text-gray-100 hover:text-green-600 transition-colors py-1"
                                                 onClick={() => {
                                                     setIsOpen(false) // Tutup menu utama
                                                     setIsInformationOpen(false) // Tutup dropdown informasi
