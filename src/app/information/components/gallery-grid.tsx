@@ -51,7 +51,13 @@ export function GalleryGrid() {
                     {galleryItems.map((item, index) => (
                         <div key={index} className="bg-gray-600 rounded-lg border border-gray-700 shadow-sm overflow-hidden">
                             <div className="aspect-video relative">
-                                <Image src={item.src || "/placeholder.svg"} alt={item.alt} fill className="object-cover" />
+                                <Image
+                                    src={item.src || "/placeholder.svg"}
+                                    alt={item.alt}
+                                    fill
+                                    sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                                    priority
+                                    className="object-cover" />
                             </div>
                             <div className="p-4">
                                 <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
