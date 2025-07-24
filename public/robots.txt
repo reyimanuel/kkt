@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://suluuntiga.vercel.app/
+
+# Sitemaps
+Sitemap: https://suluuntiga.vercel.app/sitemap.xml

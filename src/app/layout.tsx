@@ -19,6 +19,9 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
+            <head>
+                <meta name="google-site-verification" content="googleb203f806e1fe859b.html" />
+            </head>
             <body className={`${inter.className} bg-gray-900 text-white`}>
                 <div className="min-h-screen flex flex-col">
                     <Navigation />

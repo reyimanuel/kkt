@@ -30,7 +30,7 @@ export function Navigation() {
                                 className="object-cover"
                             />
                         </div>
-                        <span className="font-bold text-xl">Desa Suluun 3</span>
+                        <span className="font-bold text-xl">Desa Suluun Tiga</span>
                     </Link>
 
                     {/* Desktop Navigation */}

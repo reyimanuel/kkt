@@ -45,7 +45,7 @@ export default function HomePage() {
     return (
         <div className="min-h-screen">
             <HeroSection
-                title="Selamat Datang di Desa Suluun 3"
+                title="Selamat Datang di Desa Suluun Tiga"
                 subtitle="Masyarakat yang Harmonis, Alam yang Indah"
                 primaryButton={{ text: "Kenal Lebih Dalam Dengan Desa Suluun", href: "/information" }}
                 secondaryButton={{ text: "Pengumuman", href: "/announcements" }}

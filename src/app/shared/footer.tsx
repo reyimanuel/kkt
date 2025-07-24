@@ -18,7 +18,7 @@ export function Footer() {
                                     className="object-cover"
                                 />
                             </div>
-                            <span className="font-bold text-lg">Desa Suluun</span>
+                            <span className="font-bold text-lg">Desa Suluun Tiga</span>
                         </div>
                         <p className="text-sm text-gray-300">Komunitas yang damai di mana tradisi bertemu kemajuan.</p>
                     </div>
