@@ -15,7 +15,7 @@ interface EventPhotoGalleryProps {
     eventTitle: string
 }
 
-export function EventPhotoGallery({ photos, eventTitle }: EventPhotoGalleryProps) {
+export function EventPhotoGallery({ photos }: EventPhotoGalleryProps) {
     const [selectedPhoto, setSelectedPhoto] = useState<number | null>(null)
 
     const openLightbox = (index: number) => {
