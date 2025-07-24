@@ -7,13 +7,6 @@ import { VillageStatisticSection } from "./shared/village-statistic-section"
 import { MapSection } from "./shared/map-section"
 
 export default function HomePage() {
-    const stats = [
-        { icon: Users, value: "1,022", label: "Total Population", color: "text-blue-600" },
-        { icon: Home, value: "320", label: "Households (KK)", color: "text-green-600" },
-        { icon: MapPin, value: "5", label: "Jaga Areas", color: "text-purple-600" },
-        { icon: Building, value: "156", label: "Years of History", color: "text-orange-600" },
-    ]
-
     const contacts = [
         { icon: Phone, title: "Telepon", value: "+62 815-2619-1092", color: "text-blue-600" },
         { icon: Mail, title: "Email", value: "Desasuluuntiga@gmail.com", color: "text-green-600" },

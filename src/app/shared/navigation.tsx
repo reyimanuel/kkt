@@ -3,6 +3,7 @@
 import { useState } from "react"
 import Link from "next/link"
 import { Menu, X, ChevronDown } from "lucide-react"
+import Image from "next/image"
 
 export function Navigation() {
     const [isOpen, setIsOpen] = useState(false)
@@ -21,7 +22,13 @@ export function Navigation() {
                 <div className="flex h-16 items-center justify-between">
                     <Link href="/" className="flex items-center space-x-2">
                         <div className="h-8 w-8 bg-green-600 rounded-full flex items-center justify-center">
-                            <span className="text-white font-bold text-sm">Logo</span>
+                            <Image
+                                src="/logo.jpg"
+                                alt="Desa Suluun Logo"
+                                width={32}
+                                height={32}
+                                className="object-cover"
+                            />
                         </div>
                         <span className="font-bold text-xl">Desa Suluun 3</span>
                     </Link>
