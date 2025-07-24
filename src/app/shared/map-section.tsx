@@ -1,5 +1,5 @@
 export function MapSection() {
-    return <section className="py-16">
+    return <section className="py-16 bg-gray-800">
         <div className="container mx-auto px-4">
             <div className="text-center mb-12">
                 <h2 className="text-3xl font-bold mb-4">Peta</h2>

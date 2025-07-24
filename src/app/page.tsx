@@ -1,11 +1,19 @@
-import { Building, Phone, Mail, Clock, Calendar } from "lucide-react"
+import { Building, Phone, Mail, Clock, Calendar, Users, Home, MapPin } from "lucide-react"
 import { HeroSection } from "./shared/hero-section"
 import { OrganizationStructure } from "./shared/organization-structure"
 import { ContactInfoSection } from "./shared/contact-info-section"
 import { QuickLinksSection } from "./shared/quick-links-section"
+import { VillageStatisticSection } from "./shared/village-statistic-section"
 import { MapSection } from "./shared/map-section"
 
 export default function HomePage() {
+    const stats = [
+        { icon: Users, value: "1,022", label: "Total Population", color: "text-blue-600" },
+        { icon: Home, value: "320", label: "Households (KK)", color: "text-green-600" },
+        { icon: MapPin, value: "5", label: "Jaga Areas", color: "text-purple-600" },
+        { icon: Building, value: "156", label: "Years of History", color: "text-orange-600" },
+    ]
+
     const contacts = [
         { icon: Phone, title: "Telepon", value: "+62 813-4005-3202", color: "text-blue-600" },
         { icon: Mail, title: "Email", value: "desasuluun@gmail.com", color: "text-green-600" },
@@ -52,6 +60,8 @@ export default function HomePage() {
             />
 
             <OrganizationStructure />
+
+            <VillageStatisticSection />
 
             <QuickLinksSection links={quickLinks} />
 

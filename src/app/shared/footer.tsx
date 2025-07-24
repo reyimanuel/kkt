@@ -47,18 +47,18 @@ export function Footer() {
                         <div className="space-y-3 text-sm">
                             <div className="flex items-center gap-2">
                                 <Phone className="h-4 w-4" />
-                                <span className="text-gray-300">+62 813-4005-3202</span>
+                                <span className="text-gray-300">+62815-2619-1092</span>
                             </div>
                             <div className="flex items-center gap-2">
                                 <Mail className="h-4 w-4" />
-                                <span className="text-gray-300">desasuluun@gmail.com</span>
+                                <span className="text-gray-300">Desasuluuntiga@gmail.com</span>
                             </div>
                             <div className="flex items-center gap-2">
                                 <MapPin className="h-4 w-4" />
                                 <span className="text-gray-300">
-                                    Jl. Raya Desa Suluun No. 123, Kecamatan Suluun, Kabupaten Bernat, Provinsi Juna
+                                    Kantor Hukum Tua Desa Suluun Tiga
                                     <br />
-                                    Desa Suluun, Kabupaten bernat, Provinsi Juna
+                                    Desa Suluun Tiga, Kabupaten Minahasa Selatan, Provinsi Sulawesi Utara
                                 </span>
                             </div>
                         </div>
@@ -66,7 +66,7 @@ export function Footer() {
                 </div>
 
                 <div className="border-t mt-8 pt-8 text-center">
-                    <p className="text-sm text-gray-300">© {new Date().getFullYear()} Desa Suluun. All rights reserved.</p>
+                    <p className="text-sm text-gray-300">© {new Date().getFullYear()} Desa Suluun Tiga. All rights reserved.</p>
                 </div>
             </div>
         </footer>
