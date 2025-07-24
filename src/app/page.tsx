@@ -15,8 +15,8 @@ export default function HomePage() {
     ]
 
     const contacts = [
-        { icon: Phone, title: "Telepon", value: "+62 813-4005-3202", color: "text-blue-600" },
-        { icon: Mail, title: "Email", value: "desasuluun@gmail.com", color: "text-green-600" },
+        { icon: Phone, title: "Telepon", value: "+62 815-2619-1092", color: "text-blue-600" },
+        { icon: Mail, title: "Email", value: "Desasuluuntiga@gmail.com", color: "text-green-600" },
         { icon: Clock, title: "Jam Kerja", value: "Senin-Jumat: 8AM-5PM", color: "text-purple-600" },
     ]
 
